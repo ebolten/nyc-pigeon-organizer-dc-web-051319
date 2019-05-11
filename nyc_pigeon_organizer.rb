@@ -13,7 +13,7 @@ def nyc_pigeon_organizer(data)
           newHash[name][attribute] = []
         end
         if !newHash[name][attribute].include?(topic)
-          newHash[name][attribute] << topic
+          newHash[name][attribute] << topic.to_s
         end
       end
     end
