@@ -1,40 +1,21 @@
-=begin
-pigeon_data = {
-:color => {
-  :purple => ["Theo", "Peter Jr.", "Lucky"],
-  :grey => ["Theo", "Peter Jr.", "Ms. K"],
-  :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
-  :brown => ["Queenie", "Alex"]
-},
-:gender => {
-  :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
-  :female => ["Queenie", "Ms. K"]
-},
-:lives => {
-  "Subway" => ["Theo", "Queenie"],
-  "Central Park" => ["Alex", "Ms. K", "Lucky"],
-  "Library" => ["Peter Jr."],
-  "City Hall" => ["Andrew"]
-}
-}
-=end
-
-
 def nyc_pigeon_organizer(data)
   # write your code here!
   newHash = {}
+  data.each do |attribute, info|
+    hash.each do |key, array|
+      array.each do |name|
+      if !newHash.has_key?(name)
+        newHash[name] = {}
+      end
+      if !newHash[name].has_key?(property)
+        newHash[name][property] = []
+      end
 
-  data.each do |attributes, info|
-    attributes.each do |key, value|
-      if key == :color
-        newHash[pidgeon] = value
-
-
+      if !newHash[name][property].include?(attribute)
+        newHash[name][property] << attribute.to_s
+      end
+    end
+  end
 end
-
-
-
-
-
-
-#placeholder
+  return newHash
+end
