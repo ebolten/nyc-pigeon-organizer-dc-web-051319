@@ -6,5 +6,5 @@ def nyc_pigeon_organizer(data)
     info.each do |topic, array|
       array.each do |name|
         newHash 
-  
+
 end
